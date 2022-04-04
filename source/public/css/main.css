@@ -1,1 +1,199 @@
+body{
+    padding-left: 1%;
+    padding-right: 1%;
+    background-color: white;
+}
 
+label{
+    font-weight: bold;
+}
+
+
+
+
+/* seccion de editar */
+
+.edit{
+    border: 2px solid black;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+    width: 450px;
+    height: 500px;
+    float: right;
+    background-color: rgb(44, 140, 196);
+}
+
+.I_1{
+    font-weight: bold;
+    width: 200px;
+    background-color: lightgray;
+    border: 2px solid black;
+}
+
+.btn_buscar{
+    color: white;
+    border-radius: 5px;
+    border: 2px solid black;
+    padding-bottom: 2px;
+    padding-top: 2px;
+    padding-left: 8px;
+    padding-right: 8px;
+    width: 70px;
+    background-color: black;
+}
+
+.btn_delete{
+    color: white;
+    float: right;
+    border-radius: 5px;
+    border: 2px solid black;
+    padding-bottom: 2px;
+    padding-top: 2px;
+    padding-left: 8px;
+    padding-right: 8px;
+    width: 150px;
+    background-color: black;
+}
+
+
+
+
+/* seccion de lista de contactos */
+
+.list{
+    border: 2px solid black;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+    width: 750px;
+    height: 300px;
+    background-color: rgb(44, 140, 196);
+    
+}
+
+/* tabla */
+.D__table{
+    overflow:scroll;
+    height:150px;
+    width:550px;
+    background-color: lightgray;
+}
+
+.D__table table{
+    width:550px;
+    background-color:lightgray;
+}
+
+
+thead{
+    background-color: rgb(161, 161, 214);
+}
+
+
+td{
+    padding: 10px;
+}
+
+th{
+    width: 50px;
+    padding: 5px;
+}
+
+#may{
+    width: 200px;
+}
+
+#ID{
+    font-weight: bold;
+
+}
+
+
+
+
+
+
+/* seccion de agregar nuevo contacto */
+
+.new{
+    border: 2px solid black;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+    width: 700px;
+    height: 250px;
+    background-color: rgb(44, 140, 196);
+}
+
+.div_2{
+    padding: 9px;
+}
+
+.I_2{
+    font-weight: bold;
+    width: 300px;
+    background-color: lightgray;
+    border: 2px solid black;
+}
+
+
+
+
+
+
+/* botones */
+.btns{
+    color: white;
+    border-radius: 5px;
+    border: 2px solid black;
+    padding-bottom: 2px;
+    padding-top: 2px;
+    padding-left: 8px;
+    padding-right: 8px;
+    width: 80px;
+    background-color: black;
+}
+
+.area_btns_table{
+    width: 600px;
+}
+
+.btn_ver{
+    color: white;
+    float: right;
+    border-radius: 5px;
+    border: 2px solid black;
+    padding-bottom: 2px;
+    padding-top: 2px;
+    padding-left: 8px;
+    padding-right: 8px;
+    width: 100px;
+    background-color: black;
+}
+
+.btn_limpiar{
+    color: white;
+    border: 2px solid black;
+    padding-left: 8px;
+    padding-right: 8px;
+    width: 80px;
+    background-color: black;
+}
+
+
+
+
+
+/* INDEX */
+
+.sec_index{
+    padding-top: 150px;
+    height: 10000px;
+}
+
+.titulo{
+    font-family: arial black;
+    font-size: 500%;
+    font-weight: bold;
+}
