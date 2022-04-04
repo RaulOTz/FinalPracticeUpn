@@ -1,0 +1,139 @@
+<html>
+    <%-include('partials/head.html');%>
+	<body>
+		<header>
+			<%-include('partials/navegacion.html');%>
+		</header>
+		<br>
+
+		<section class="edit">
+			<h2>Editar o Buscar contacto</h2>
+			<div>
+				<form action="/contactosList/id" method="get">
+
+					<label for="idContactos" class="mb-3"> Id del contacto: </label>
+					
+					<input class="I_1" type="text" id="idContactos" name="idContactos" placeholder="001" >
+					
+					<button class="btn_buscar" type="submit"> Buscar </button>
+				</form>
+			</div>
+			<% if ( contacto ) { %>
+
+			<div>
+				
+					<form action="/contactosList/id" method="post">
+
+						<input value="<%=contacto.idContactos%>" type="hidden" name="idContactos" id="idContactos" >
+	
+						<label for="nombre">Nombre:</label>
+						<input class="I_1" value="<%=contacto.nombre%>" type="text" id="nombre" name="nombre" placeholder="Raul Zatarain" >
+							<br><br>
+						<label for="domicilio">Domicilio:</label>
+						<input class="I_1" value="<%=contacto.domicilio%>" type="text" id="domicilio" name="domicilio" placeholder="Av. Genaro Estrada" >
+							<br><br>
+						<label for="telefono"> Telefono: </label>
+						<input class="I_1" value="<%=contacto.telefono%>" type="text" id="telefono" name="telefono" placeholder="numero telefonico/celular"  >
+							<br><br>
+						<button class="btns" type="submit" class="mt-3">Guardar</button>
+	
+					</form>
+					<br><br><b><br><br><br><br><br><br><br><br><br><br>
+					<form action="/contactosList/id/borrar" method="post">
+	
+						<input value="<%=contacto.idContactos%>" type="hidden" name="idContactos" id="idContactos" >
+						<button class="btn_delete" type="submit"> Eliminar contacto </button>
+	
+					</form>
+	
+				
+				
+			</div>
+
+			<% } %>
+		
+		</section>		
+
+		<section class="list">
+			<h2>Lista de contactos</h2>
+			<center>
+				<form class="area_btns_table" action="/contactosList" method="post">
+					<button class="btn_ver" type="submit">Ver tabla</button>
+				</form>
+				<div class="D__table">
+					<table>
+						<thead>
+							<tr>
+								<th>ID</th>
+								<th id="may">Nombre</th>
+								<th id="may">Domicilio</th>
+								<th id="may">Telefono</th>
+							</tr>
+						</thead>
+						<% if (contactos) { %>
+							<tbody>
+								<% for(var i=0; i < contactos.length; i++ ) { %>
+								<tr>
+									<td id="ID"><%= contactos[i].idContactos %></td>
+									<td><%= contactos[i].nombre %></td>
+									<td><%= contactos[i].domicilio %></td>
+									<td><%= contactos[i].telefono %> </td>
+								</tr>
+								<% } %>
+								
+							</tbody>
+							
+						<% } %>
+						
+						
+					</table>
+				</div>
+				
+				
+				<form class="area_btns_table" action="/contactosList" method="get">
+					<button class="btn_limpiar" action="/contactosList">Limpiar</button>
+				</form>
+				
+
+			</center>
+					
+		</section>
+		<br>			
+
+
+		<section class="new">
+
+			<h2>Agregar nuevo contacto</h2>
+			
+			<form action="/contactosList/nuevo" method="post">
+				
+				<div> 
+
+					<div class="div_2">
+						<label for="nombre">Nombre</label>
+						<input class="I_2" type="text" name="nombre" id="nombre" placeholder="Raul Zatarain">
+					</div>
+
+					<div class="div_2">
+						<label for="domicilio">Domicilio</label>
+						<input class="I_2" type="text" name="domicilio" id="domicilio" placeholder="Av. Genaro Estrada">
+					</div>
+
+					<div class="div_2">
+						<label for="telefono">Telefono</label>
+						<input class="I_2" type="text" name="telefono" id="telefono" placeholder="numero telefonico/celular">
+					</div>
+
+				</div>
+				
+				<div>
+
+					<button class="btns" action="/contactosList" type="submit">Guardar</button>
+
+				</div>
+			</form>
+		</section>
+						
+	</body>
+</html>
+
